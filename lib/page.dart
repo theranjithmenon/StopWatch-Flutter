@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:lottie/lottie.dart';
 
 class StopWatch extends StatefulWidget {
