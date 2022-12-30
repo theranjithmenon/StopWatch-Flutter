@@ -95,6 +95,13 @@ class _StopWatchState extends State<StopWatch> {
                       isRunning = true;
                     });
                   },
+                  onLongPress: () {
+                    reset();
+                    timer?.cancel();
+                    setState(() {
+                      isRunning = false;
+                    });
+                  },
                   child: const Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Icon(
