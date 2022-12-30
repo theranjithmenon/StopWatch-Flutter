@@ -34,10 +34,10 @@ class _StopWatchState extends State<StopWatch> {
 
   @override
   Widget build(BuildContext context) {
-
     String twoDigits(int n) => n.toString().padLeft(2, '0');
-
-    
+    final hours = twoDigits(duration.inHours);
+    final minutes = twoDigits(duration.inMinutes.remainder(60));
+    final seconds = twoDigits(duration.inSeconds.remainder(60));
     return Scaffold(
       body: SafeArea(
           child: Center(
@@ -49,7 +49,7 @@ class _StopWatchState extends State<StopWatch> {
             child: Lottie.asset('assets/97976-clock.json'),
           ),
           Text(
-            '${duration.inSeconds}',
+            '$hours: $minutes : $seconds',
             style: const TextStyle(fontSize: 55),
           )
         ],
